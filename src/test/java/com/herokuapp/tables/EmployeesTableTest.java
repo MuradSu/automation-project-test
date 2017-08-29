@@ -39,6 +39,8 @@ public class EmployeesTableTest {
 		WebElement firstCell=driver.findElement(By.xpath("//table[@id='table1']//tr[1]/th[1]"));
 		//table[@id='table1']//tr[1]/th[1]
 		System.out.println(firstCell.getText());
+		
+		
 	}
 	
 	@Test
