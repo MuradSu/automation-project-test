@@ -9,10 +9,8 @@ import cucumber.api.junit.Cucumber;
 	features = "src/test/resources/features", 
 	glue = "com/fourstay/step_definitions", 
 	tags = "@smoke", 
-	dryRun = true
-	//changed to true
+	dryRun = false
 
-	//adding a nonsense comment
 		)
 
 public class CukesRunner {
