@@ -19,7 +19,7 @@ public class EmployeesTableTest {
 		driver.get(ConfigurationReader.getProperty("herokuUrl"));
 	}
 	
-	@Test
+//	@Test ()
 	public void test() {
 		//print number of rows in table 1.
 		WebElement webtable1=driver.findElement(By.id("table1"));
@@ -41,16 +41,18 @@ public class EmployeesTableTest {
 		System.out.println(firstCell.getText());
 		//just comment for testing
 		
+		//Commenting 
+		
 		
 	}
 	
-	@Test
+//	@Test
 	public void loopWebTables(){
 		
 		WebElement table1=driver.findElement(By.id("table1"));
 		//get all rows from table1
 		List<WebElement> rows=table1.findElements(By.tagName("tr"));
-		System.out.println("Number of rows in table 1:" + rows.size());
+		System.out.println("Number of rows in table1: " + rows.size());
 		
 		for(WebElement row : rows){
 			//System.out.println(row.getText());
@@ -63,11 +65,11 @@ public class EmployeesTableTest {
 		}
 	}
 	
-	@Test
+	//@Test()
 	public void loopTablesXpath(){
-//		List<WebElement> rowsInTable2=
-//				driver.findElements(By.xpath("//table[@id='table2']/tbody/tr"));
-//		System.out.println("Number of rows in Table2:" + rowsInTable2.size() ) ;
+		List<WebElement> rowsInTable2=
+				driver.findElements(By.xpath("//table[@id='table2']/tbody/tr"));
+		System.out.println("Number of rows in Table2:" + rowsInTable2.size() ) ;
 //		
 		for(int rowNum=1;rowNum <= 4; rowNum++){			
 			for(int cellNum=1;cellNum<=6;cellNum++){
@@ -88,7 +90,7 @@ public class EmployeesTableTest {
 		driver.findElement(By.id("datepicker-from")).click();
 		Thread.sleep(1234);
 		WebElement augustFirst=driver.findElement(
-		By.xpath("//div[@id='datefrom-datepicker']//table//td[@data-speak-value='Tuesday August 1 2017']"));
+		By.xpath("//div[@id='datefrom-datepicker']//table//td[@data-speak-value='Tuesday August 1 2018']"));
 		augustFirst.click();
 	}
 
